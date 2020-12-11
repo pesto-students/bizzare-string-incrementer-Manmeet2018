@@ -2,19 +2,23 @@
  * Create a new secondSmallestAndLargest
  * @function bizarreStringIncrementer.
  * @param {String} - String to which 1 is to be added. 
- * @return {String} - resultant String to which need 1 sould be added.
+ * @return {String} - resultant String which contain the addition of 1.
  */
 
-const bizarreStringIncrementer = (string) => {
-    if (typeof string != "string")
-        throw "Please enter String."
+const bizarreStringIncrementer = (str) => {
+    if (typeof str != "string")
+        throw "Please enter a String."
 
-    const temp = string.split('');
+    const temp = str.split('');
     const size = temp.length;
     let idx = size - 1;
     let carry = 1;
     let bizarreString = "";
 
+    /*  
+        Consider all the positions in reverse manner which is a
+        number and add 1 to the resultant number.
+     */
     while (idx >= 0 && temp[idx] - '0' >= 0 && temp[idx] - '0' <= 9) {
         const number = temp[idx] - '0' + carry;
         carry = (number >= 10) ? ((number) / 10) : 0;
@@ -24,11 +28,12 @@ const bizarreStringIncrementer = (string) => {
 
     if (carry)
         bizarreString += "1";
-
+    
     bizarreString = bizarreString.split('').reverse().join('');
 
-    if (idx == 0) return bizarreString;
-
+    if (idx == 0)
+        return bizarreString;
+    
     return string.substr(0, idx + 1) + bizarreString;
 }
 
