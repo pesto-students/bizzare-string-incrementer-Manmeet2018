@@ -1,7 +1,7 @@
 /**
- * Create a new secondSmallestAndLargest
+ * Create a new bizarreStringIncrementer
  * @function bizarreStringIncrementer.
- * @param {String} - String to which 1 is to be added. 
+ * @param {String} - String to which 1 needs to be added. 
  * @return {String} - resultant String which contain the addition of 1.
  */
 
@@ -15,7 +15,7 @@ const bizarreStringIncrementer = (str) => {
     let carry = 1;
     let bizarreString = "";
 
-    /*  
+    /*
         Consider all the positions in reverse manner which is a
         number and add 1 to the resultant number.
      */
