@@ -9,10 +9,12 @@ const bizarreStringIncrementer = (str) => {
     if (typeof str != "string")
         throw "Please enter a String."
 
+    const NO_TO_ADD = 1;
     const temp = str.split('');
     const size = temp.length;
+    
     let idx = size - 1;
-    let carry = 1;
+    let carry = NO_TO_ADD;
     let bizarreString = "";
 
     /*
@@ -27,7 +29,7 @@ const bizarreStringIncrementer = (str) => {
     }
 
     if (carry)
-        bizarreString += "1";
+        bizarreString += NO_TO_ADD.toString();
     
     bizarreString = bizarreString.split('').reverse().join('');
 
@@ -37,8 +39,8 @@ const bizarreStringIncrementer = (str) => {
     return str.substr(0, idx + 1) + bizarreString;
 }
 
-/*
-Test Case
+// /*
+// Test Case
 console.log(bizarreStringIncrementer("foo"));
 console.log(bizarreStringIncrementer("23"));
 console.log(bizarreStringIncrementer("foo0041"));
@@ -56,4 +58,4 @@ try {
 catch (err) {
     console.log(err);
 }
-*/
+// */
