@@ -34,13 +34,13 @@ const bizarreStringIncrementer = (str) => {
     if (idx == 0)
         return bizarreString;
     
-    return string.substr(0, idx + 1) + bizarreString;
+    return str.substr(0, idx + 1) + bizarreString;
 }
 
 /*
 Test Case
 console.log(bizarreStringIncrementer("foo"));
-console.log(bizarreStringIncrementer("foo23"));
+console.log(bizarreStringIncrementer("23"));
 console.log(bizarreStringIncrementer("foo0041"));
 console.log(bizarreStringIncrementer("foo9"));
 console.log(bizarreStringIncrementer("foo099"));
