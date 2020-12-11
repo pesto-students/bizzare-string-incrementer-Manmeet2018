@@ -2,10 +2,11 @@
  * Create a new bizarreStringIncrementer
  * @function bizarreStringIncrementer.
  * @param {String} - String to which 1 needs to be added. 
- * @return {String} - resultant String which contain the addition of 1.
+ * @return {String} - adds the number 1 if string does not end in a number
+ * or increments by 1 the if the string ends with a number
  */
 
-const bizarreStringIncrementer = (str) => {
+module.exports = (str) => {
     if (typeof str != "string")
         throw "Please enter a String."
 
@@ -36,12 +37,12 @@ const bizarreStringIncrementer = (str) => {
     if (idx == 0)
         return bizarreString;
     
-    return str.substr(0, idx + 1) + bizarreString;
+    let ans = str.substr(0, idx + 1) + bizarreString;
+    return ans;
 }
-
 /*
-Test Case
-console.log(bizarreStringIncrementer("foo"));
+/Test Case
+console.log(bizarreStringIncrementer('foo'));
 console.log(bizarreStringIncrementer("23"));
 console.log(bizarreStringIncrementer("foo0041"));
 console.log(bizarreStringIncrementer("foo9"));
@@ -50,7 +51,7 @@ console.log(bizarreStringIncrementer("f99oo"));
 console.log(bizarreStringIncrementer("f99oo23"));
 console.log(bizarreStringIncrementer("f99oo099"));
 console.log(bizarreStringIncrementer("f99oo0099"));
-console.log(bizarreStringIncrementer("f99oo9999"));
+console.log(bizarreStringIncrementer("f99oo0099"));
 
 try {
     bizarreStringIncrementer();
