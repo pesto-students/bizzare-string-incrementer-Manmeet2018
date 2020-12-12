@@ -1,5 +1,5 @@
-var expect = require('chai').expect;
-var bizarreStringIncrementer = require('../bizarreStringIncrementer');
+const expect = require('chai').expect;
+const bizarreStringIncrementer = require('../bizarreStringIncrementer');
 
 
 describe('bizarreStringIncrementer', () => {
