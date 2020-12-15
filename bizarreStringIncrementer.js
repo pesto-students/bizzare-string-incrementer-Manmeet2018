@@ -6,6 +6,17 @@
  * or increments by 1 the if the string ends with a number
  */
 
+// Solution using Regax 
+
+module.exports = (str) => {
+    if (typeof str != "string")
+        throw "Please enter a String."
+    const regax = /([0-8]|\d?9+)?$/;
+    const NO_TO_ADD = 1;
+    return str.replace(regax, (e) => e ? + e + NO_TO_ADD : NO_TO_ADD);
+}
+
+// Normal solution 
 module.exports = (str) => {
     if (typeof str != "string")
         throw "Please enter a String."
@@ -40,6 +51,9 @@ module.exports = (str) => {
     let ans = str.substr(0, idx + 1) + bizarreString;
     return ans;
 }
+
+
+
 /*
 /Test Case
 console.log(bizarreStringIncrementer('foo'));
