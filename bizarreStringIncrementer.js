@@ -7,7 +7,6 @@
  */
 
 // Solution using Regax 
-
 module.exports = (str) => {
     if (typeof str != "string")
         throw "Please enter a String."
