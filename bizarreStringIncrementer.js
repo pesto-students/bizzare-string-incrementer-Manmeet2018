@@ -10,9 +10,9 @@
 module.exports = (str) => {
     if (typeof str != "string")
         throw "Please enter a String."
-    const regax = /([0-8]|\d?9+)?$/;
+    const regaxPattern = /([0-8]|\d?9+)?$/;
     const NO_TO_ADD = 1;
-    return str.replace(regax, (e) => e ? + e + NO_TO_ADD : NO_TO_ADD);
+    return str.replace(regaxPattern, (ele) => ele ? + ele + NO_TO_ADD : NO_TO_ADD);
 }
 
 // Normal solution 
