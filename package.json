@@ -1,0 +1,29 @@
+{
+  "name": "bizzare-string-incrementer-manmeet2018",
+  "version": "1.0.0",
+  "description": "Given a bizarre string, increment the string by 1. Refer to the test cases for more info.",
+  "main": "bizarreStringIncrementer.js",
+  "scripts": {
+    "test": "mocha || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/bizzare-string-incrementer-Manmeet2018.git"
+  },
+  "author": "Manmeet2018",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/bizzare-string-incrementer-Manmeet2018/issues"
+  },
+  "homepage": "https://github.com/pesto-students/bizzare-string-incrementer-Manmeet2018#readme",
+  "dependencies": {
+    "import": "0.0.6",
+    "require": "^2.4.20",
+    "run": "^1.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chromedriver": "^87.0.2",
+    "mocha": "^8.2.1"
+  }
+}
